@@ -1,1 +1,32 @@
-<p>book-list works!</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+@for (book of books; track book.id) {
+  <div class="card bg-base-100 w-96 shadow-sm">
+    <figure>
+      <img
+        src="https://img.freepik.com/free-vector/blank-book-white-background_1308-23052.jpg?ga=GA1.1.254050788.1744663285&semt=ais_hybrid&w=740"
+        alt="Shoes" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">{{book.title}}</h2>
+      <p>By: {{ book.author }}</p>
+      @if (book.year) {
+        <p>Year: {{ book.year }}</p>
+      }
+
+      @if (book.genre) {
+        <p>Genre: {{ book.genre }}</p>
+      }
+      <div class="card-actions justify-end">
+        <button class="btn btn-error" >Delete</button>
+      </div>
+    </div>
+  </div>
+
+}
+
+</div>
+@if (books.length === 0) {
+  <div class="text-center p-8">
+    <p class="text-xl">No books available</p>
+  </div>
+}
