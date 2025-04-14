@@ -8,7 +8,12 @@ import { Book } from '../models/book.model';
 export class BookService {
 
   constructor() { }
-  books = signal<Book[]>([])
+  books = signal<Book[]>([
+    {id: 1, title: 'Book 1',
+    author: 'Author 1',
+    year: 2021, genre: 'Fiction'
+    }
+  ])
   nextId = signal(1);
   getBooks(){
     return this.books();
