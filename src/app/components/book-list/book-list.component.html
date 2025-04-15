@@ -17,7 +17,7 @@
         <p>Genre: {{ book.genre }}</p>
       }
       <div class="card-actions justify-end">
-        <button class="btn btn-error" >Delete</button>
+        <button (click)="deleteBook(book.id)" class="btn btn-error" >Delete</button>
       </div>
     </div>
   </div>

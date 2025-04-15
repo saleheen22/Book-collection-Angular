@@ -11,4 +11,8 @@ import {BookService} from '../../services/book.service';
 export class BookListComponent {
 bookService = inject(BookService);
 books = this.bookService.books;
+deleteBook(id: number) {
+  this.bookService.deleteBook(id);
+  alert('The book is deleted successfully!')
+}
 }
