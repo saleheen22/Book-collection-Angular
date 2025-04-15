@@ -17,11 +17,11 @@ export class BookService {
       author: 'Author 2',
       year: 2022, genre: 'Non-Fiction'
       },
-      {id: 2, title: 'Book 2',
+      {id: 3, title: 'Book 2',
         author: 'Author 2',
         year: 2022, genre: 'Non-Fiction'
         },
-        {id: 2, title: 'Book 2',
+        {id: 4, title: 'Book 2',
           author: 'Author 2',
           year: 2022, genre: 'Non-Fiction'
           }

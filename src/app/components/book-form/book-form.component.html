@@ -1,49 +1,58 @@
-<div class="p-4 space-y-4 max-w-lg mx-auto">
-  <div>
-    <label for="title" class="block text-sm font-medium mb-1">Title</label>
-    <input
-      id="title"
-      type="text"
-      name="title"
-      placeholder="Enter book title"
-      class="input input-bordered w-full"
-    />
-  </div>
+<form (ngSubmit)="addBook()">
+  <div class="p-4 space-y-4 max-w-lg mx-auto">
+    <div>
+      <label for="title" class="block text-sm font-medium mb-1">Title</label>
+      <input
+        id="title"
+        type="text"
+        name="title"
+        [(ngModel)]="newBook.title"
+        required
+        placeholder="Enter book title"
+        class="input input-bordered w-full"
+      />
+    </div>
 
-  <div>
-    <label for="author" class="block text-sm font-medium mb-1">Author</label>
-    <input
-      id="author"
-      type="text"
-      name="author"
-      placeholder="Enter author name"
-      class="input input-bordered w-full"
-    />
-  </div>
+    <div>
+      <label for="author" class="block text-sm font-medium mb-1">Author</label>
+      <input
+        id="author"
+        type="text"
+        name="author"
+        placeholder="Enter author name"
+        class="input input-bordered w-full"
+        [(ngModel)]="newBook.author"
+        required
+      />
+    </div>
 
-  <div>
-    <label for="year" class="block text-sm font-medium mb-1">Year (optional)</label>
-    <input
-      id="year"
-      type="number"
-      name="year"
-      placeholder="Publication year"
-      class="input input-bordered w-full"
-    />
-  </div>
+    <div>
+      <label for="year" class="block text-sm font-medium mb-1">Year (optional)</label>
+      <input
+        id="year"
+        type="number"
+        name="year"
+        placeholder="Publication year"
+        class="input input-bordered w-full"
+        [(ngModel)]="newBook.year"
+        required
+      />
+    </div>
 
-  <div>
-    <label for="genre" class="block text-sm font-medium mb-1">Genre (optional)</label>
-    <input
-      id="genre"
-      type="text"
-      name="genre"
-      placeholder="Book genre"
-      class="input input-bordered w-full"
-    />
-  </div>
+    <div>
+      <label for="genre" class="block text-sm font-medium mb-1">Genre (optional)</label>
+      <input
+        id="genre"
+        type="text"
+        name="genre"
+        placeholder="Book genre"
+        class="input input-bordered w-full"
+        [(ngModel)]="newBook.genre"
+      />
+    </div>
 
-  <div class="flex justify-end mt-6">
-    <button  type="button" class="btn btn-primary">Add Book</button>
+    <div class="flex justify-end mt-6">
+      <button  type="submit" class="btn btn-primary">Add Book</button>
+    </div>
   </div>
-</div>
+</form>
