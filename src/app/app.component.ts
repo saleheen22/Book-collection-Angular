@@ -6,6 +6,7 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [BookListComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

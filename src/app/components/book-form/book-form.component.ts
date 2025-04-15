@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-book-form',
   imports: [CommonModule, FormsModule],
+  standalone: true,
   templateUrl: './book-form.component.html',
   styleUrl: './book-form.component.css'
 })

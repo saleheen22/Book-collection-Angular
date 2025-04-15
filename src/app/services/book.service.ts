@@ -26,7 +26,7 @@ export class BookService {
           year: 2022, genre: 'Non-Fiction'
           }
   ])
-  nextId = signal(1);
+  nextId = signal(5);
   getBooks(){
     return this.books();
   }
