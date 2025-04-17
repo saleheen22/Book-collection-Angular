@@ -1,6 +1,7 @@
+import { SHARED_IMPORTS } from './../components/shared/shared.imports';
 import { Book } from './../models/book';
 import { Injectable, signal } from '@angular/core';
-
+import { SHARED_IMPORTS} from '../components/shared/shared.imports'
 
 @Injectable({
   providedIn: 'root'
