@@ -1,15 +1,15 @@
+import { Book } from './../../models/book';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BookFormComponent} from '../book-form/book-form.component'
 
-// Export an array containing all common modules
 export const SHARED_IMPORTS = [
   CommonModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  BookFormComponent
+
 ];
 
-// You can also create separate groups if needed
-export const FORM_IMPORTS = [
-  FormsModule,
-  ReactiveFormsModule
-];
+
+

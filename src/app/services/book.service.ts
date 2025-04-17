@@ -1,7 +1,7 @@
-import { SHARED_IMPORTS } from './../components/shared/shared.imports';
+import { SHARED_IMPORTS } from '../components/shared/shared.imports';
 import { Book } from './../models/book';
 import { Injectable, signal } from '@angular/core';
-import { SHARED_IMPORTS} from '../components/shared/shared.imports'
+
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +39,13 @@ export class BookService {
     ]);
     this.nextId.update(id => id + 1);
 
+  }
+  updateBook(updatedBook: Book) {
+    this.books.update(books =>
+      books.map(book =>
+        book.id === updatedBook.id ? { ...book, ...updatedBook } : book
+      )
+    );
   }
   deleteBook(id: number) {
     this.books.update(books =>

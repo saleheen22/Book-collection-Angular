@@ -16,7 +16,9 @@
       @if (book.genre) {
         <p>Genre: {{ book.genre }}</p>
       }
-      <div class="card-actions justify-end">
+      <div class="card-actions justify-between">
+
+        <button class="btn btn-success" (click)="openModal()">Update Books</button>
         <button (click)="deleteBook(book.id)" class="btn btn-error" >Delete</button>
       </div>
     </div>
@@ -30,3 +32,17 @@
     <p class="text-xl">No books available</p>
   </div>
 }
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <!-- <button (click)="updateBook(book)" class="btn btn-warning" >Delete</button> -->
+    <app-book-form/>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>

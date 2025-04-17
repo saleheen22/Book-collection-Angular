@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  openModal() {
+    const modal = document.getElementById('my_modal_5') as HTMLDialogElement;
+    if (modal) {
+      modal.showModal();
+    }
+  }
 }
