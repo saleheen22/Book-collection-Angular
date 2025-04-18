@@ -21,8 +21,8 @@ deleteBook(id: number) {
     text: 'Book deleted successfully!'
   });
 }
-updateBook(book: Book) {
-  this.bookService.updateBook(book);
+updateBook(id: number, changes: Partial<Book>) {
+  this.bookService.updateBook(id, changes);
   alert('The book is updated successfully!')
 }
 openModal() {
