@@ -1,11 +1,12 @@
+import { SHARED_IMPORTS } from './../shared/shared.imports';
 import { BookService } from './../../services/book.service';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-book-form',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, SHARED_IMPORTS],
   standalone: true,
   templateUrl: './book-form.component.html',
   styleUrl: './book-form.component.css'
@@ -27,7 +28,15 @@ if (this.newBook.title && this.newBook.author && this.newBook.year && this.newBo
     year: undefined,
     genre: ''
   };
-}
-alert('The book is added successfully!')
+};
+Swal.fire({
+  icon: 'success',
+  title: 'Success!',
+  text: 'Book added successfully!'
+})
+const modal = document.getElementById('my_modal_5') as HTMLDialogElement;
+    if (modal) {
+      modal.close();
+    }
 }
 }

@@ -1,4 +1,5 @@
 import { SHARED_IMPORTS } from './../shared/shared.imports';
+import Swal from 'sweetalert2';
 
 import { Book } from './../../models/book';
 import { Component, inject } from '@angular/core';
@@ -14,14 +15,18 @@ bookService = inject(BookService);
 books = this.bookService.books;
 deleteBook(id: number) {
   this.bookService.deleteBook(id);
-  alert('The book is deleted successfully!')
+  Swal.fire({
+    icon: 'success',
+    title: 'Deleted!',
+    text: 'Book deleted successfully!'
+  });
 }
 updateBook(book: Book) {
   this.bookService.updateBook(book);
   alert('The book is updated successfully!')
 }
 openModal() {
-  const modal = document.getElementById('my_modal_5') as HTMLDialogElement;
+  const modal = document.getElementById('my_modal_6') as HTMLDialogElement;
   if (modal) {
     modal.showModal();
   }
