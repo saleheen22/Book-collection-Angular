@@ -13,6 +13,7 @@ import {BookService} from '../../services/book.service';
 export class BookListComponent {
 bookService = inject(BookService);
 books = this.bookService.books;
+editingBook: Book | null = null;
 deleteBook(id: number) {
   this.bookService.deleteBook(id);
   Swal.fire({
@@ -25,7 +26,8 @@ updateBook(id: number, changes: Partial<Book>) {
   this.bookService.updateBook(id, changes);
   alert('The book is updated successfully!')
 }
-openModal() {
+openModal(book: Book) {
+  this.editingBook = book;
   const modal = document.getElementById('my_modal_6') as HTMLDialogElement;
   if (modal) {
     modal.showModal();

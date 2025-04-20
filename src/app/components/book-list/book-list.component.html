@@ -20,7 +20,7 @@
       }
       <div class="card-actions justify-between">
 
-        <button class="btn btn-success" (click)="openModal()">Update Books</button>
+        <button class="btn btn-success" (click)="openModal(book)">Update Books</button>
         <button (click)="deleteBook(book.id)" class="btn btn-error" >Delete</button>
       </div>
     </div>
@@ -39,7 +39,7 @@
     <h3 class="text-lg font-bold">Hello!</h3>
     <p class="py-4">Press ESC key or click the button below to close</p>
     <!-- <button (click)="updateBook(book)" class="btn btn-warning" >Delete</button> -->
-    <app-book-form/>
+    <app-book-form [book]="editingBook"/>
     <div class="modal-action">
       <form method="dialog">
         <!-- if there is a button in form, it will close the modal -->

@@ -65,7 +65,13 @@
     <div class="flex justify-end mt-6">
 
 
-        <button type="submit" class="btn btn-primary">Add Book</button>
+      <button type="submit" class="btn btn-primary">
+        @if (book) {
+          Update Book
+        } @else {
+          Add Book
+        }
+      </button>
 
 
     </div>
