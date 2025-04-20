@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 ">
 @for (book of books(); track book.id) {
-  <div class="card  w-96 shadow-2xl border-b-6 border-r-2">
-    <figure>
+  <div class="card  h-[500px]  w-96 shadow-2xl border-b-6 border-r-2">
+    <figure class="h-72 flex items-center justify-center overflow-hidden">
       <img
         src="{{ book.src }}"
         alt="Shoes" />

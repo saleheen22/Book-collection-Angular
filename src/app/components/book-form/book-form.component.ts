@@ -1,6 +1,6 @@
 import { SHARED_IMPORTS } from './../shared/shared.imports';
 import { BookService } from './../../services/book.service';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input, onChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
@@ -12,6 +12,8 @@ import Swal from 'sweetalert2';
   styleUrl: './book-form.component.css'
 })
 export class BookFormComponent {
+  @Input() book: Book | null = null;
+
 bookService = inject(BookService);
 newBook = {
   title: '',
