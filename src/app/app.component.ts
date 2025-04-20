@@ -1,3 +1,4 @@
+import { FooterComponent } from './components/footer/footer.component';
 
 import { BookListComponent } from './components/book-list/book-list.component';
 
@@ -8,7 +9,7 @@ import { HeroSectionComponent } from "./components/hero-section/hero-section.com
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [BookListComponent, NavbarComponent, HeroSectionComponent],
+  imports: [BookListComponent, NavbarComponent, HeroSectionComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
