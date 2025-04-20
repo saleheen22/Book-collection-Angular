@@ -1,7 +1,7 @@
 import { SHARED_IMPORTS } from './../shared/shared.imports';
 import {Book} from '../../models/book'
 import { BookService } from './../../services/book.service';
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, onChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
   templateUrl: './book-form.component.html',
   styleUrl: './book-form.component.css'
 })
-export class BookFormComponent {
+export class BookFormComponent implements onChanges {
   @Input() book: Book | null = null;
 
 bookService = inject(BookService);
