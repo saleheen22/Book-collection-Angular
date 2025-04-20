@@ -17,7 +17,8 @@ newBook = {
   title: '',
   author: '',
   year: undefined as number | undefined,
-  genre: ''
+  genre: '',
+  src: ''
 };
 addBook(): void {
 if (this.newBook.title && this.newBook.author && this.newBook.year && this.newBook.genre) {
@@ -26,7 +27,8 @@ if (this.newBook.title && this.newBook.author && this.newBook.year && this.newBo
     title: '',
     author: '',
     year: undefined,
-    genre: ''
+    genre: '',
+    src: ''
   };
 };
 Swal.fire({

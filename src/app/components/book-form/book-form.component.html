@@ -50,6 +50,17 @@
         [(ngModel)]="newBook.genre"
       />
     </div>
+    <div>
+      <label for="coverImage" class="block text-sm font-medium mb-1">Cover Image URL (optional)</label>
+      <input
+        id="coverImage"
+        type="text"
+        name="coverImage"
+        placeholder="Book cover image URL"
+        class="input input-bordered w-full"
+        [(ngModel)]="newBook.src"
+      />
+    </div>
 
     <div class="flex justify-end mt-6">
 
